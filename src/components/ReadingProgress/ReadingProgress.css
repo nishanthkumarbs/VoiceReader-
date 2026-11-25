@@ -1,0 +1,88 @@
+.vr-reading-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progress-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.progress-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 500;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border-strong);
+}
+
+.status-dot.is-live {
+  background: var(--success);
+  box-shadow: 0 0 0 4px var(--success-soft);
+  animation: pulseDot 1.6s infinite;
+}
+
+.status-dot.is-paused {
+  background: var(--warning);
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.progress-icon {
+  color: var(--accent-primary);
+}
+
+.progress-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-eta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-muted);
+}
+
+.progress-percent {
+  font-weight: 700;
+  color: var(--accent-primary);
+}
+
+.progress-track {
+  position: relative;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  background: var(--accent-gradient);
+  transition: width 220ms ease-out;
+}
+

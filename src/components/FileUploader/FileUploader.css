@@ -1,0 +1,124 @@
+.vr-file-uploader {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upload-dropzone {
+  border: 2px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.vr-file-uploader.is-compact .upload-dropzone {
+  padding: 20px 18px;
+  gap: 10px;
+}
+
+.upload-dropzone:hover:not(.is-loading),
+.upload-dropzone.is-dragging {
+  border-color: var(--accent-primary);
+  background: var(--bg-accent-soft);
+  transform: translateY(-1px);
+}
+
+.upload-dropzone.is-loading {
+  cursor: wait;
+  opacity: 0.85;
+}
+
+.upload-hidden-input {
+  display: none;
+}
+
+.upload-icon-badge {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: var(--bg-accent-soft);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.55rem;
+}
+
+.vr-file-uploader.is-compact .upload-icon-badge {
+  width: 44px;
+  height: 44px;
+  font-size: 1.3rem;
+}
+
+.upload-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--accent-primary);
+  border-radius: 50%;
+  animation: spinLoader 0.8s linear infinite;
+}
+
+@keyframes spinLoader {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.upload-copy h3 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.upload-copy p {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  max-width: 460px;
+}
+
+.upload-formats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.format-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-color);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.upload-feedback {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.upload-feedback.is-error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+

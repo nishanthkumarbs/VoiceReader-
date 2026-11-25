@@ -1,0 +1,135 @@
+.vr-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.settings-header {
+  padding: 20px;
+}
+
+.settings-header h2 {
+  margin: 0 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+
+.settings-header p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.settings-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.settings-section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.settings-section h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.setting-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.setting-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 560px;
+}
+
+.setting-info strong {
+  font-size: 0.92rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.setting-info span {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.theme-choice-group {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.setting-select {
+  height: 38px;
+  padding: 0 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface-subtle);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.switch-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.switch-label input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent-primary);
+}
+
+.setting-sliders-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  padding-top: 6px;
+}
+
+.setting-slider-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+}
+
+.setting-slider-box strong {
+  color: var(--text-primary);
+}
+
+.setting-slider-box input {
+  accent-color: var(--accent-primary);
+}
+
+.settings-danger-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
